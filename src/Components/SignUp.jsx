@@ -1,4 +1,4 @@
-import './CSS/basic.css' 
+import '../CSS/basic.css' 
 import GoogleBtn from './GoogleButton';
 import Applebtn from './AppleButton'
 

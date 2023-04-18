@@ -1,6 +1,6 @@
 import './CSS/basic.css' 
-import GoogleBtn from './Components/GoogleButton';
-import Applebtn from './Components/AppleButton'
+import GoogleBtn from './GoogleButton';
+import Applebtn from './AppleButton'
 
 function SignUp(){
     return(

@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
-import SignUp from './SignUp';
-import Dashborad from './Dashborad';
+import SignUp from './Components/SignUp';
+import Dashborad from './Components/Dashborad';
 
 
 

@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import SignUp from './SignUp';
+import Dashborad from './Dashborad';
 
 
 
@@ -9,7 +10,8 @@ function App() {
 
   return (
     <>
-    <SignUp/>
+    {/* <SignUp/> */}
+    <Dashborad/>
     </>
 
   );

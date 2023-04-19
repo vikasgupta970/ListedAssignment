@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {AiOutlinePieChart,AiFillSchedule,AiOutlineSetting} from 'react-icons/ai'
 import {BsFillTagsFill} from 'react-icons/bs'
 import {FaRegUserCircle} from 'react-icons/fa'
+import NavBar from './NavBar'
+import Card from './Card'
 
 const Dashborad = () => {
+
+    
+   
+
+
+
+
+
+    
   return (
     <div class="grid md:grid-cols-5 sm:grid-cols-3 h-screen w-screen p-10">
         <div class="flex flex-col  text-white rounded-3xl bg-black sm:col-span-1  md:col-span-2 lg:col-span-1 h-full w-full">
@@ -29,8 +40,9 @@ const Dashborad = () => {
             </div>
 
         </div>
-        <div class="centered rounded-xl bg-WhiteSmoke sm:col-span-2 md:col-span-3 lg:col-span-4 h-full w-full">
-            <h1>Div2</h1>
+        <div class="flex rounded-xl flex-col px-14 sm:col-span-2 md:col-span-3 lg:col-span-4 h-full w-full">
+            <NavBar/>
+            <Card class="mt-10"/>
         </div>
     </div>
   )

@@ -1,8 +1,17 @@
 import '../CSS/basic.css' 
 import GoogleBtn from './GoogleButton';
 import Applebtn from './AppleButton'
+import { useEffect, useState } from 'react';
 
 function SignUp(){
+const [email,setemail]=useState('');
+const [password,setpassword]=useState('');
+
+useEffect(()=>{
+    console.log(password);
+    console.log(email);
+},)
+
     return(
         <>
         <div class="grid  md:grid-cols-3 md:grid-rows-1 h-screen w-screen sm:grid-rows-2  ">
@@ -39,11 +48,11 @@ function SignUp(){
                     <div class="flex flex-col m-6 bg-white rounded-xl">
                         <div class="flex flex-col px-7 py-7">
                             <label  class="font-Lato font-normal  text-base">Email address</label>
-                            <input placeholder='Email' class="bg-Whitesmoke mt-2.5 py-2.5 px-3.5 rounded-xl"></input>
+                            <input placeholder='Email' class="bg-Whitesmoke mt-2.5 py-2.5 px-3.5 rounded-xl" onChange={e=>setemail(e.target.value)}></input>
                         </div>
                         <div class="flex flex-col px-7">
                             <label  class="font-Lato font-normal  text-base">Password</label>
-                            <input type='password' placeholder="•••••••••" class=" bg-DarkWhiteSmoke mt-2.5 py-2.5 px-3.5 rounded-xl "></input>
+                            <input type='password' placeholder="•••••••••" class=" bg-DarkWhiteSmoke mt-2.5 py-2.5 px-3.5 rounded-xl " onChange={e=>setpassword(e.target.value)}></input>
                         </div>
                         <div class="flex flex-col px-7 my-5">
                             <a href=''  class="font-Lato font-normal  text-base text-link">Forget password?</a>
@@ -56,6 +65,7 @@ function SignUp(){
                 </div>
             </div>
         </div>
+        
         </>
     )
 }

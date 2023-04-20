@@ -1,6 +1,7 @@
 import '../CSS/basic.css' 
 import GoogleBtn from './GoogleButton';
 import Applebtn from './AppleButton'
+import {Link} from 'react-router-dom'
 import { useEffect, useState } from 'react';
 
 function SignUp(){
@@ -57,7 +58,7 @@ useEffect(()=>{
                         <div class="flex flex-col px-7 my-5">
                             <a href=''  class="font-Lato font-normal  text-base text-link">Forget password?</a>
                         </div>
-                        <button class="bg-black text-white font-Montserrat font-bold text-base py-2 rounded-xl mx-7 mb-7">Sign In</button>
+                        <Link to='/Dashboard' class="bg-black text-white font-Montserrat font-bold text-base py-2 rounded-xl mx-7 mb-7 text-center">Sign In</Link>
                     </div>
 
                     {/* Para */}

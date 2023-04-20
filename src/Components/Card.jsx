@@ -6,7 +6,11 @@ import {BsFillPersonVcardFill} from 'react-icons/bs'
 const Card = () => {
 
   const[Data,setData]=useState('');
-  const[Data2,setData2]=useState('');
+  const[Data2,setData2]=useState('[]');
+  const[CoinName,setCoinName]=useState('');
+  const[Rank,setRank]=useState('');
+  const[Price,setPrice]=useState('');
+
 
   useEffect(()=>{
 
@@ -18,11 +22,23 @@ const Card = () => {
    
     // Fetching Sample Data of one Mutual fund Company
 
-    fetch('https://api.coinstats.app/public/v1/coins?skip=0&limit=5&currency=EUR')
-    .then(response => response.json())
-    .then(response => setData2(response))
-    .catch(err => console.error(err));
+//    
+
 },[])
+
+useEffect(()=>{
+      fetch('https://api.coinstats.app/public/v1/coins?skip=0&limit=5&currency=EUR')
+          .then(response => response.json())
+          .then(response => setData2(response.coins))
+          .catch(err => console.error(err));
+      
+          setCoinName(
+            Data2[0].name
+          )
+          setRank(Data2[0].rank)
+          setPrice(Math.round(Data2[0].price))
+})
+
 
   return (
     <div class="grid grid-cols-2 gap-8 mt-10 lg:grid-cols-4">
@@ -54,7 +70,7 @@ const Card = () => {
         <div class="flex flex-col pl-6">
             <label class="font-Lato text-sm font-normal ">Coin fetched</label>
             <h1 class="font-OpenSans">{
-                  Data2.coins[0].name
+                  CoinName
               }</h1>
         </div>
       </div>
@@ -70,7 +86,7 @@ const Card = () => {
         <div class="flex flex-col pl-6">
             <label class="font-Lato text-sm font-normal ">Price Of Coin </label>
             <h1 class="font-OpenSans">{
-                  Math.round(Data2.coins[0].price)
+                  Price
               }</h1>
         </div>
       </div>
@@ -86,7 +102,7 @@ const Card = () => {
         <div class="flex flex-col pl-6">
             <label class="font-Lato text-sm font-normal ">Rank Of Coin </label>
             <h1 class="font-OpenSans">{
-                  Data2.coins[0].rank
+                 Rank
               }</h1>
         </div>
       </div>

@@ -22,6 +22,8 @@ module.exports = {
         card2:'#F4ECDD',
         card3:'#EFDADA',
         card4:'#DEE0EF',
+        grey:'#666666',
+        lightgrey:'#999999',
       }
     },
   },

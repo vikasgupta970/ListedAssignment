@@ -19,6 +19,9 @@ module.exports = {
         DarkWhiteSmoke:'#EAEAEA',
         link:'#346BD4',
         card:'#DDEFE0',
+        card2:'#F4ECDD',
+        card3:'#EFDADA',
+        card4:'#DEE0EF',
       }
     },
   },

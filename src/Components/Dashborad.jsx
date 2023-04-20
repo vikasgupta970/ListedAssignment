@@ -41,8 +41,8 @@ const Dashborad = () => {
 
         </div>
         <div class="flex rounded-xl flex-col px-14 sm:col-span-2 md:col-span-3 lg:col-span-4 h-full w-full">
-            <NavBar/>
-            <Card class="mt-10"/>
+        <NavBar/>
+        <Card/>
         </div>
     </div>
   )
